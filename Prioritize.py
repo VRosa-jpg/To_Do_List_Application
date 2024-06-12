@@ -26,6 +26,7 @@ def prioritize(to_Do):
   X = input("[Respond with X to exit this screen]").upper()
 
   if X == "X":
+
     return
 
   for task_number in range(3):
