@@ -28,7 +28,7 @@ def prioritize(to_Do):
       user_choice = to_Do[task_number]
       to_Do.remove(user_choice)
       to_Do.insert(0, user_choice)
-    return task_number_input
+    
   
   try:
     is_tasknumber_an_actaul_number()
