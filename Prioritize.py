@@ -39,7 +39,6 @@ def prioritize(to_Do):
     try:
       task = int(task_number) - 1
       if 0 <= task <= len(to_Do):
-        task = int(task_number) - 1
         user_choice = to_Do[task]
         to_Do.remove(user_choice)
         to_Do.insert(0, user_choice)

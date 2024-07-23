@@ -8,8 +8,6 @@ def edit(to_Do):
 
   if X == 'x':
     return
-  else:
-    pass
 
   while True:
     task_number = input("What item would you like to edit? ")
