@@ -18,15 +18,15 @@ def remove_1(to_Do):
   if X == "X":
     return
 
-  for item_to_remove in range(3):
+  for user_attempt in range(3):
     
-    item_to_remove = input("What item would you like to remove?").upper()
+    user_attempt = input("What item would you like to remove?").upper()
 
-    if item_to_remove == "X":
+    if user_attempt == "X":
       return
 
     try:
-      task = int(item_to_remove) - 1
+      task = int(user_attempt) - 1
       if 0 <= task <= len(to_Do):
         user_choice = to_Do[task]
         to_Do.remove(user_choice)
