@@ -31,7 +31,7 @@ def prioritize(to_Do):
 
   for user_attempt in range(3):
 
-    user_attempt = input('Which items would you like to prioritize? ')
+    user_attempt = input('Which item would you like to prioritize? ')
 
     if user_attempt.upper() == 'X':
       return
