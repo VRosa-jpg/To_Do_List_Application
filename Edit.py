@@ -12,7 +12,7 @@ def edit(to_Do):
   while True:
     user_input = input("What item would you like to edit? ")
     
-    if user_input == "X":
+    if user_input.upper() == "X":
       return
 
     try:
