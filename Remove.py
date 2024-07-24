@@ -17,8 +17,6 @@ def remove_1(to_Do):
 
   if X == "X":
     return
-  else:
-    pass
 
   for item_to_remove in range(3):
     

@@ -29,15 +29,15 @@ def prioritize(to_Do):
 
     return
 
-  for user_input in range(3):
+  for user_attempt in range(3):
 
-    user_input = input('Which items would you like to prioritize? ')
+    user_attempt = input('Which items would you like to prioritize? ')
 
-    if user_input.upper() == 'X':
+    if user_attempt.upper() == 'X':
       return
     
     try:
-      task = int(user_input) - 1
+      task = int(user_attempt) - 1
       if 0 <= task <= len(to_Do):
         user_choice = to_Do[task]
         to_Do.remove(user_choice)
