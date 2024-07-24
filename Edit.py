@@ -4,9 +4,9 @@ def edit(to_Do):
   # Print List
   PrintList.print_list(to_Do)
 
-  X = input("[Press X if you want to exit]").upper()
+  X = input("[Press X if you want to exit]")
 
-  if X == 'x':
+  if X.upper() == 'X':
     return
 
   while True:
