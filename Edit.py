@@ -10,13 +10,13 @@ def edit(to_Do):
     return
 
   while True:
-    task_number = input("What item would you like to edit? ")
+    user_input = input("What item would you like to edit? ")
     
-    if task_number == "X":
+    if user_input == "X":
       return
 
     try:
-      task = int(task_number) - 1
+      task = int(user_input) - 1
       if 0 <= task <= len(to_Do):
         user_choice = to_Do[task]
         print(f"Update: {user_choice}")
