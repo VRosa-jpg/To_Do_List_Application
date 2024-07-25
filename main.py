@@ -30,7 +30,7 @@ MAIN MENU
       
       # Removing Items from the list
       elif action == '2':
-        Remove.remove_1(to_Do)
+        Remove.remove(to_Do)
 
       # Putting items at the top of the list
       elif action == '3':

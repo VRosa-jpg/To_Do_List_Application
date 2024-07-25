@@ -1,7 +1,7 @@
 import PrintList
 
 
-def remove_1(to_Do):
+def remove(to_Do):
 
   print("""
   ------------------------------
@@ -32,12 +32,12 @@ def remove_1(to_Do):
         to_Do.remove(user_choice)
         PrintList.print_list(to_Do)
         return
-
-      else:
-        print("Enter a number within range!")
         
     except ValueError:
       print("Please enter a valid number!")
+
+    except IndexError:
+      print("Please enter a valid number within in range!")
 
     
 
