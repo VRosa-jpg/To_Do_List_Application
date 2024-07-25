@@ -1,6 +1,14 @@
 
 import PrintList
 
+"""
+Prioritize an item in the to-do list.
+
+Parameters:
+to_do (list): The list of tasks to be prioritized
+
+"""
+
 
 def prioritize(to_Do):
 
@@ -15,44 +23,33 @@ def prioritize(to_Do):
   PrintList.print_list(to_Do)
 
   #Exit screen
+  X = input("[Respond with X to exit this screen]").upper()
 
-  X = input("[Respond with X to exit this screen]")
+  if X == "X":
 
-  #Prompt user for task number
-  task_number = input('Which items would you like to prioritize?')
-
-  # This code will be reusable for Remove Function as well
-  def is_tasknumber_an_actaul_number():
-    task_number_input = int(task_number) - 1
-    if 0 <= task_number_input < len(to_Do):
-      user_choice = to_Do[task_number]
-      to_Do.remove(user_choice)
-      to_Do.insert(0, user_choice)
-    
-  
-  try:
-    is_tasknumber_an_actaul_number()
-    
-
-  except ValueError:
-    print("Please enter a valid number.")
-    task_number = input('Which items would you like to prioritize?')
-    
-
-
-  
-
-  if X == 'X' and task_number == 'X':
     return
-        
-  else:
-    print("Item not listed")
 
-  #Print LIST
+  for user_attempt in range(3):
+
+    user_attempt = input('Which item would you like to prioritize? ')
+
+    if user_attempt.upper() == 'X':
+      return
+    
+    try:
+      task = int(user_attempt) - 1
+      if 0 <= task <= len(to_Do):
+        user_choice = to_Do[task]
+        to_Do.remove(user_choice)
+        to_Do.insert(0, user_choice)
+        print("Did enter a valid input! Returning back to main menu...")
+        PrintList.print_list(to_Do)
+        return
+
+      else: 
+        print("Please enter a valid number within range!")
+
+    except ValueError:
+      print("Enter a valid number!")
 
   PrintList.print_list(to_Do)
-
-
-
-
-  

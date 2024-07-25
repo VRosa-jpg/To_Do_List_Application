@@ -1,11 +1,11 @@
 import Add
+import Edit
 import Prioritize
 import PrintList
 import Remove
 
-
 to_Do = []
-removed = []
+
 
 def main():
     while True:
@@ -30,23 +30,24 @@ MAIN MENU
       
       # Removing Items from the list
       elif action == '2':
-        Remove.remove_1(to_Do, removed)
+        Remove.remove(to_Do)
 
       # Putting items at the top of the list
       elif action == '3':
           Prioritize.prioritize(to_Do)
+      # Edit an item on a list
+      elif action == '4':
+        Edit.edit(to_Do)
         
       # Print list
-      elif action == '4':
+      elif action == '5':
         PrintList.print_list(to_Do)
 
       # End Program
-      elif action == '5':
+      elif action == '6':
         break
-
-        
+ 
       else:
           print("Action not recognized")
-
 
 main()

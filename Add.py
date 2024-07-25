@@ -22,7 +22,7 @@ Item
   to-do list
   """
   while True:
-    add_another_item = input("Do you want to add another item? Y/N: ")
+    add_another_item = input("Do you want to add another item? Y/N: ").upper()
 
     if add_another_item == "Y":
       add_task()
