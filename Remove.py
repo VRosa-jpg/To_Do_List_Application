@@ -13,9 +13,9 @@ def remove(to_Do):
   PrintList.print_list(to_Do)
 
   #User presses X to exit screen
-  X = input("[Enter X to exit this screen]").upper()
+  X = input("[Enter X to exit this screen]")
 
-  if X == "X":
+  if X.upper() == "X":
     return
 
   for user_attempt in range(3):

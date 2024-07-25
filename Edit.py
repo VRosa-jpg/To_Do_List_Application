@@ -17,7 +17,7 @@ def edit(to_Do):
 
     try:
       task = int(user_input) - 1
-      if 0 <= task <= len(to_Do):
+      if 0 <= task < len(to_Do):
         user_choice = to_Do[task]
         print(f"Update: {user_choice}")
         update = input("update item to: ")
@@ -25,12 +25,13 @@ def edit(to_Do):
         PrintList.print_list(to_Do)
         return
 
-      else: 
+      else:
         print("Enter a number within range!")
 
     except ValueError:
       print("Please enter a valid number!")
-      
+
+    
       
 
     
