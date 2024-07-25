@@ -42,6 +42,7 @@ def prioritize(to_Do):
         user_choice = to_Do[task]
         to_Do.remove(user_choice)
         to_Do.insert(0, user_choice)
+        print("Did enter a valid input! Returning back to main menu...")
         PrintList.print_list(to_Do)
         return
 

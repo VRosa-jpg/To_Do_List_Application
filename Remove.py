@@ -36,7 +36,6 @@ def remove_1(to_Do):
       else:
         print("Enter a number within range!")
         
-
     except ValueError:
       print("Please enter a valid number!")
 
