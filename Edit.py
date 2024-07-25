@@ -25,9 +25,6 @@ def edit(to_Do):
         PrintList.print_list(to_Do)
         return
 
-      else:
-        print("Enter a number within range!")
-
     except ValueError:
       print("Please enter a valid number!")
 
